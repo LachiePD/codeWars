@@ -37,3 +37,7 @@ function findOdd(A) {
   })
   return answer
 }
+
+/* this is the cracked answer
+ * const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+ * */
