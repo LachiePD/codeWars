@@ -1,4 +1,4 @@
-//PREP PARAM:array of ints, one int will have an odd number of times it shows.
+//.PREP PARAM:array of ints, one int will have an odd number of times it shows.
 //Returns the number that appears an odd number of times,
 //example findOdd([1.1.1.1,2,2,2,3,3]) => 2;
 /* Psuedo
