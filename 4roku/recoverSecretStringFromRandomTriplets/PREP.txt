@@ -1,0 +1,36 @@
+P=array of triplets, [['t','u','p'],
+  ['w','h','i'],
+  ['t','s','u'],
+  ['a','t','s'],
+  ['h','a','p'],
+  ['t','i','s'],
+  ['w','h','s']
+  ]
+R= a 'hidden' string, which is built from these triplets. Each char in the triplet, will appear before its following neighbour. 
+e.g. above, w appears before h, h before i. t before s and so on.
+
+E=array above will return  'whatisup';
+P=
+
+function answer(arr){
+    
+    build = [chars in array];
+    forEach triplet in arr{
+    forEach char in triplet{
+    (sorter(char, nextChar in triplet))
+    }
+    }
+    
+    
+    sorter(char, nextChar){
+      iterate through build;
+      if iteratrion  = char && if charIndex+1 != nextChar{
+          remove char;
+          insert removed char at first iteration of nextChar;
+          }
+      }
+    
+        
+    }
+ 
+ 

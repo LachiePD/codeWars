@@ -1,0 +1,40 @@
+Parameters:
+a 2d array, containing arrays of ints.
+
+
+
+Returns:
+
+the sum of the greatest 'slide down' in the 2d array. 
+A 'slide down' is the iteration of each arr, with only the ints of the next arr, that are = or +1 of the current index of the int being looked at.
+
+Example:
+
+
+  [[1],
+  [1,2],
+ [2,3,4],
+[9,1,2,3]]=> 1+1+2+9=>13
+Psuedo Code:
+
+
+func (2dArray){
+
+let intIndex = 0;
+iterate through 2d array.
+each iteration, call this arr,  select biggest int that has index thats = or +1 of intIndex;
+
+Once selected, run pathCheck;
+
+
+
+
+
+mental notes:
+sides of pyramid, always have same path. 
+side ints of array, will always have same parents, can have different children, doesnt seem to matter.
+
+starting at bottom, find biggest int, then compare the sum of biggest parent to next biggest int and parent sum.
+
+
+}

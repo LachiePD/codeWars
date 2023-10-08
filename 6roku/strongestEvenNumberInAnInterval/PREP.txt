@@ -1,0 +1,61 @@
+PARAMETERS:
+A closed interval   
+
+
+
+RETURNS:
+
+returns the number with a greatest 'strength';
+
+EXAMPLE:
+
+func strengthFinder([10, 12]) {
+
+....do stuff
+
+}
+=> 12
+
+
+PSEDUO-CODE:
+
+function    main([10, 20]){
+
+let champion = {int: arr[0], strength:0};
+
+
+
+for( i = 0; i <=arr[1]; i++){
+
+let iStrength = strengthChecker(arr[i]);
+
+if(iStrength > champion.strength){
+
+champion = {int: arr[i], strength: iStrength}
+}
+
+
+}
+
+
+return champion.int;
+}
+
+
+function strengthChecker(num){
+
+let ele = num;
+let strength = 0;
+
+while(num%2 === 0){
+ele = ele/2;
+strength++;
+}
+
+return strength
+}
+
+
+DEFINITIONS:
+
+Strength: the number of times a int can be /2, until an odd number is reached.
