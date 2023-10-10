@@ -1,0 +1,33 @@
+
+PARAMETERS:
+An array with a variety of elements.
+
+RETURNS:
+The array, with any zeros moved to the end, preserving the original order of the other elements
+
+EXAMPLE:
+
+moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
+
+
+
+PSEUDO CODE:
+
+
+func moveZeros(arr) {
+
+let answer =arr
+loop through answer:
+
+if ele === '0'
+remove element.    -splice method?
+put element at end of array -push method
+
+
+return answer
+}
+
+
+
+THOUGHTS:
+Need to use splice method, and either push or unshift method.
