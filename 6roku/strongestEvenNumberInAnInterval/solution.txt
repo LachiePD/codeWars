@@ -5,3 +5,13 @@ function strongestEven(n, m){
     }
     return current
 }
+
+
+
+
+
+here is the formula for it
+
+f(n) = log₂(n) - log₂(n - ⌊n/2⌋)
+
+where ⌊n/2⌋ is the greatest integer less than or equal to n/2.
