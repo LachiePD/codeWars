@@ -1,0 +1,15 @@
+function sumPairs(arr, sum, first=0) {
+  let firstEle;
+  let secondEle;
+  if(first+1 === arr.length){return undefined}
+  
+  for(let second = first+1; second < arr.length; second++){
+    firstEle = arr[first];
+    secondEle = arr[second];
+    if( firstEle + secondEle === sum){
+      console.log(firstEle, secondEle)
+      return [firstEle, secondEle];
+    }
+  }
+  sumPairs(arr, sum, ++first)
+}
