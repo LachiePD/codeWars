@@ -1,0 +1,34 @@
+PARAMETERS:
+an array of strings, in the format of: ['NORTH', 'SOUTH', 'EAST', 'WEST']
+RETURNS:
+returns an array of strings with the needless , side by side, directions removed
+EXAMPLE:
+
+const directionTrim(['NORTH', 'SOUTH', 'EAST', 'EAST']) ----> ['EAST' , 'EAST']
+
+const directionTrim(['NORTH', 'EAST', 'SOUTH', 'WEST'])---->['NORTH', 'EAST', 'SOUTH', 'WEST']
+
+PSUEDO CODE:
+
+const directionTrim = (path) =>{
+create vars: trimmed (bool), current, next;
+
+for loop through working:
+current = i,
+next= i+1,
+
+switch(current){
+case current == north && next == south:
+remove both elements
+decrement i by 2;
+trimmed = false
+.
+.
+.
+}
+
+if(trimmed) return working
+}
+
+
+

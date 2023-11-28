@@ -1,0 +1,22 @@
+function dirReduc(arr){
+
+  let working = [...arr];
+  
+  let result = [];
+  let complements = {'NORTH':'SOUTH', 'EAST':'WEST', 'SOUTH':'NORTH', 'WEST':'EAST'}
+  
+  for(let i =0; i < working.length; i++){
+    let current = working[i];
+    let next = working[i+1];
+   
+    if(next == complements[current])
+      {
+        working.splice(i, 2);
+        i = -1;
+      }
+    
+    
+  }
+ return working
+
+}
