@@ -1,0 +1,40 @@
+Parameters:
+'referal bonus', an int.
+
+'the price of a beer can', int
+Returns:
+
+the amount of levels of beer cans that can be built in a pyramid, with given amount of money (referal bonus), and price of beers
+
+
+Example:
+
+beeramid(1500, 2) ===> 12
+
+
+beeramid(5000, 3)===>
+
+
+Psuedo Code:
+
+func beeramid{
+
+var bonus
+var price
+
+var totalPrice = 0
+var level = 0
+
+
+while(bonus < totalPrice){
+
+totalPrice = totalPrice + (price * level^2)
+level++;
+
+
+
+}
+}
+
+
+

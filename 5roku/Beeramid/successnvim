@@ -1,0 +1,28 @@
+// Returns number of complete beeramid levels
+var beeramid = function(bonus, price) {
+  
+  
+  let totalPrice = 0;
+  let answer = 0;
+  
+  
+  
+  for(let i = 0; bonus>totalPrice; i++){
+   
+    totalPrice= totalPrice+ (price  * Math.pow(i, 2))
+ 
+    console.log("----")
+    console.log("Price: "   + price)
+    
+    console.log("Total Price:   " + totalPrice);
+    
+    console.log("Bonus:  " + bonus)
+    if(bonus >= totalPrice){
+      answer = i;
+    }
+  }
+  
+  
+  return answer
+  
+}

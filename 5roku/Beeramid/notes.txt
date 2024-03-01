@@ -1,0 +1,37 @@
+ seems it will be helpful to find the difference between the amount of cans held in the largest level, and the rest of the levels.
+
+
+ 5 levels:
+
+ 5th level will have 5^2 = 25
+
+ rest will have 1^2 + 2^2 + 3^2 + 4^2 = 1 + 4 + 9 + 16 = 5 + 25 = 30
+
+ total of 55
+
+ difference is 5.
+
+
+
+ 6 levels:
+
+ 6th level will have 6^2 = 36
+
+ rest will have 30 + 25 = 55 (found from prev answer).
+
+total of 81
+
+ difference is 11.
+
+
+
+ 7 levels:
+
+ 7th = 7^2 = 49
+
+ rest will have 55+36 = 91
+
+ difference is 42
+
+
+ nothing of note found here. 
