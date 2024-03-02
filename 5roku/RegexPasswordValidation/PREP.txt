@@ -1,0 +1,47 @@
+Parameters:
+
+password is given (string)
+
+Returns:
+
+true/false
+Example:
+
+doTest('fjd3IR9') ====> true
+
+
+Psuedo Code:
+
+
+
+func test(password){
+
+if(password length < 6){
+return false
+}
+
+if(password ! contain lowercase letter){
+return false
+}
+
+
+if(password ! contain uppercaseletter){
+return false
+}
+
+if(password ! contain digit){
+return false
+}
+
+if( password contains non-alphanumeric digit){
+return false
+}
+
+else{
+return true
+}
+}
+
+
+
+^^this is incorrect, the solution is simply wanting a regex expression
