@@ -1,0 +1,32 @@
+Parameters:
+string of numbers
+
+Returns:
+string of numbers, ordered by 'weight'
+'weight' is the sum of the digits that make up the number.
+Example:
+'6 11 42  99'
+===> '2 6 42 99'
+
+
+Psuedo Code:
+can potentially convert all values to unicode character, then sort aphabetically, then convert back.
+
+couldnt figure it out, heres the psuedo
+
+
+function(input){
+
+break input into array, called inputArr. This array holds objects of the original int, and the weight (yet to be found);
+
+
+loop through inputArr:
+
+for each ele in inputArr, break the original ele into seperate digits, then assign the weight prop to the sum of these digits. can probably use .reduce() here.
+
+
+
+
+sort through the  inputArr, according to the now found 'weights'.
+
+return a string, built from the original ints, that have now been sorted according to weights.

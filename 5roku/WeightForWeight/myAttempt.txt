@@ -1,0 +1,34 @@
+this is my attempt, got very messy
+
+function orderWeight(strng) {
+
+  let returnString = "";
+  let arr = strng.split(' ')
+ 
+  for(let i = 0; i < arr.length; i++){
+    let seperation = arr[i].split('');
+    arr[i] = {originalInt: parseInt(arr[i]), weight: 0};
+    for(let ele of seperation){
+      arr[i].weight =  arr[i].weight + parseInt(ele);
+    }
+  }
+  
+  
+  arr = arr.sort((a, b)=>{
+                if(a.weight > b.weight){return 1}
+    
+    if(a.weight === b.weight){
+      return (b.weight.toString().localeCompare(a.weight.toString()))
+    }
+    else{    return -1}
+}
+                 )
+
+  for(let ele of arr){
+
+    returnString += ele.originalInt + " "
+  }
+
+  returnString = returnString.trim()
+  return returnString
+}
