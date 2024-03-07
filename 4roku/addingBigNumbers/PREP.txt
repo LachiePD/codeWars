@@ -1,0 +1,4 @@
+Params:
+2 ints
+
+=>sum of two ints
