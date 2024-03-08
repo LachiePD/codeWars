@@ -1,4 +1,17 @@
 Params:
-2 ints
+2 strings
+Returns:
+=>sum of two strings. ("the params are int in string format");
 
-=>sum of two ints
+Example:
+
+func("123" , "002")=> "125
+
+
+Psuedo code:
+
+func(one, two){
+
+return (one+2.toString());
+
+}
