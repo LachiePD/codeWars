@@ -1,0 +1,59 @@
+function topThreeWords(text) {
+
+  let dictionary = {}
+  let textToParse = text;
+  let topThree = [];
+
+  while(textToParse){
+    textToParse = textToParse.trim();
+
+    let whiteSpace = textToParse.indexOf(' ')
+    let word =  generateWord(textToParse, whiteSpace)
+
+    addToDictionary(dictionary, word)
+    textToParse = removeWord(textToParse, whiteSpace)
+  }
+
+  topThree = generateTopThree(dictionary);
+  return [];
+}
+
+const generateWord = (text,  indexOfWhiteSpace) =>{
+  if(indexOfWhiteSpace === -1){
+    return text.slice(0)
+  }
+  else{
+    return text.slice(0, indexOfWhiteSpace)
+  }
+}
+const addToDictionary = (dictionary, word) =>{
+  if(dictionary[word] === undefined){
+    dictionary[word] = 1;
+  }
+  else{
+    dictionary[word] =  dictionary[word] + 1; 
+  }
+}
+const removeWord = (text, indexOfWhiteSpace) =>{
+  if(indexOfWhiteSpace === -1){
+    return ''
+  }
+  return text.slice(indexOfWhiteSpace)
+}
+
+const generateTopThree = (dictionary) =>{
+  let dictionaryEntries = Object.entries(dictionary);
+  let returnArr = ['','','']
+  
+  returnArr[0] = dictionaryEntries[0][0]
+  
+  for(let word of dictionaryEntries){
+    if( [word[1]] >   returnArr[0]){
+      returnArr[0] = word[0]
+    }
+    
+    console.log(returnArr)
+  }
+  
+  
+}
