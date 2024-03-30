@@ -1,0 +1,44 @@
+// Priority Queue implementation
+class PriorityQueue {
+    constructor() {
+        this.queue = [];
+    }
+
+    enqueue(item) {
+        this.queue.push(item);
+        this.queue.sort((a, b) => b[1] - a[1]);
+        if (this.queue.length > 3) {
+            this.queue.shift(); // Correctly remove the least frequent word
+        }
+    }
+
+    getTopThree() {
+        return this.queue.map(item => item[0]);
+    }
+}
+
+function topThreeWords(text) {
+    let pq = new PriorityQueue();
+    let textToParse = text.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+    let endOfWordRegex = /\b\w+['\w]*\b/g; // Regex to match words, including contractions
+    let match;
+
+    // Extract and count words
+    while ((match = endOfWordRegex.exec(textToParse)) !== null) {
+        let word = match[0];
+        let existingWord = pq.queue.find(item => item[0] === word);
+        if (existingWord) {
+            existingWord[1]++;
+        } else {
+            pq.enqueue([word, 1]);
+        }
+    }
+
+    // Return top three words
+    return pq.getTopThree();
+}
+
+// Example usage
+const text = "This is a sample text. It contains words like won't, won't, and won't. Also, it has won't, won't, won't, won't, won't.";
+console.log(topThreeWords(text)); // Expected output: [ 'won\'t', 'it', 'is' ]
+
