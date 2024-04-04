@@ -1,0 +1,46 @@
+function solution(numbers) {
+ let input = numbers; 
+ let changable = true;
+
+ while (changable) {
+   let beforeIteration = reduceToValue(input);
+
+   if(!isSorted(input)){
+     input.sort((a, b) => a - b);
+     }
+   
+   input = parseArray(input)
+
+    let afterIteration = reduceToValue(input)
+    changable = beforeIteration !== afterIteration;
+ }
+
+ let answer = input.reduce((acc, val) => acc + val, 0);
+ return answer;
+}
+
+const parseArray = (input) =>{
+  
+  let returnArray = input;
+  
+    for (let i = 0; i < returnArray.length; i++) {
+      if(returnArray[i] > returnArray[0]){
+      returnArray[i] -= returnArray[0];
+        }
+    }
+  
+  return returnArray
+}
+const reduceToValue = (input) =>{
+  let value = input.reduce((acc, ele)=> acc + ele, 0)
+  return value;
+}
+
+const isSorted = (arr) => {
+ for (let i = 1; i < arr.length; i++) {
+    if (arr[i - 1] > arr[i]) {
+      return false;
+    }
+ }
+ return true;
+};

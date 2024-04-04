@@ -1,0 +1,26 @@
+function solution(numbers) {
+    let changable = true;
+
+    while (changable) {
+        // Sort the array in ascending order
+        numbers.sort((a, b) => a - b);
+
+        // Flag to check if any changes were made in this iteration
+        let changed = false;
+
+        // Iterate over the array, reducing each element by the smallest element
+        for (let i = 1; i < numbers.length; i++) {
+            // Subtract the smallest element from all elements greater than it
+            while (numbers[i] > numbers[0]) {
+                numbers[i] -= numbers[0];
+                changed = true; // Mark that a change was made
+            }
+        }
+
+        // If no changes were made in this iteration, the array is stable
+        changable = changed;
+    }
+
+    // Return the sum of the final array
+    return numbers.reduce((acc, val) => acc + val, 0);
+}

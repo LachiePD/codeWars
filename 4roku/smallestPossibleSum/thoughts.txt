@@ -1,0 +1,7 @@
+my attempt worked, but wasnt efficient enough
+my efficieny was different because it sorted every iteration, it is better to check if it needs sorting then sorting it.
+
+Operating on something in place is more efficient, should be done if the array isnt needed elsewhere in the program.
+
+
+Using a flag to note when a change occured is more efficient than checking the whole arrays sum every iteration.
